@@ -1,0 +1,18 @@
+  .logo__header {
+      font-family: Raleway;
+      @include font (700, 26px, 1.2, 0.03em);
+    }
+    
+    .logo__header-left {
+      color: #2196f3;
+    }
+    .logo__header-right {
+      color:$color-top-text;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo__header-right {
+      margin-right: 90px;
+    }

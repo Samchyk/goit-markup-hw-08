@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<!---------------------ГОЛОВА------------------------->
+
+<body>
+  <header class="container header-container">
+    <div class="page-header">
+      <nav class="logo">
+        <a class="logo__header link" href="./index.html"><span class="logo__header-left">Web</span><span
+            class="logo__header-right">Studio</span>
+        </a>
+
+        <ul class="nav list">
+          <li>
+            <a class="nav__link  link" href="./index.html">Студия
+            </a>
+          </li>
+          <li>
+            <a class="nav__link active link " href="./portfolio.html">Портфолио</a>
+          </li>
+          <li><a class="nav__link link" href="Контакты">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-kontakt">
+        <ul class="kontakt list">
+          <li>
+            <a class="kontakt__link link" href="mailto:info@devstudio.com">info@devstudio.com
+              <svg class="kontakt__icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-envelope-hover"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="kontakt__link link" href="tel:+38 099 111 11 11">+38 099 111 11 11
+              <svg class="kontakt__icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-rel"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!---------------------------КНОПКИ--------------------->
+
+
+  <main>
+    <section class="examples">
+      <div class="container">
+        <h1 class="examples__title">Нашы работы</h1>
+        <div class="examples__btn">
+          <button class="examples__button" type="button">Все</button>
+          <button class="examples__button" type="button">Веб-сайты</button>
+          <button class="examples__button" type="button">Приложения</button>
+          <button class="examples__button" type="button">Дизайн</button>
+          <button class="examples__button" type="button">Маркетинг</button>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------ПРИМЕРЫ------------------------------>
+
+    <div class="container">
+      <ul class="list list-examples">
+        <Li class="list-examples__list-item list-item">
+          <div class="list-item__wrap">
+          <a class="list-item__link link" href="./portfolio.html"><img src="./images/port1.jpg" alt="ноутбук" width="370"
+              height="294">
+              <p class="list-item__top-text">
+                Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
+                шпионажа и атак на защищённые сервера конкурентов.
+              </p>
+              </div>
+            <h2 class="list-item__title">Технокряк</h2>
+            <p class="list-item__text">Веб-сайт</p>
+          </a>
+        </Li>
+        <Li class="list-examples__list-item list-item">
+          <div class="list-item__wrap">
+            <a class="list-item__link link" href="./portfolio.html"><img src="./images/port2.jpg" alt="ноутбук" width="370"
+                height="294">
+                <p class="list-item__top-text">
+                  
+                </p>
+                </div>
+            <h2 class="list-item__title">Постер New Orlean vs Golden Star</h2>
+            <p class="list-item__text">Дизайн</p>
+          </a>
+        </Li>
+        <Li class="list-examples__list-item list-item">
+          <div class="list-item__wrap">
+            <a class="list-item__link link" href="./portfolio.html"><img src="./images/port3.jpg" alt="ноутбук" width="370"
+                height="294">
+                <p class="list-item__top-text">
+                  
+                </p>
+                </div>
+            <h2 class="list-item__title">Ресторан Seafood</h2>
+            <p class="list-item__text">Приложение</p>
+          </a>
+        </Li>
+        <Li class="list-examples__list-item list-item">
+          <div class="list-item__wrap">
+            <a class="list-item__link link" href="./portfolio.html"><img src="./images/port4.jpg" alt="ноутбук" width="370"
+                height="294">
+                <p class="list-item__top-text">
+                  
+                </p>
+                </div>
+            <h2 class="list-item__title">Проект Prime</h2>
+            <p class="list-item__text">Маркетинг</p>
+          </a>
+        </Li>
+        <Li class="list-examples__list-item list-item">
+          <div class="list-item__wrap">
+            <a class="list-item__link link" href="./portfolio.html"><img src="./images/port5.jpg" alt="ноутбук" width="370"
+                height="294">
+                <p class="list-item__top-text">
+                  
+                </p>
+                </div>
+            <h2 class="list-item__title">Проект Boxes</h2>
+            <p class="list-item__text">Приложение</p>
+          </a>
+        </Li>
+        <Li class="list-examples__list-item list-item">
+          <div class="list-item__wrap">
+            <a class="list-item__link link" href="./portfolio.html"><img src="./images/port6.jpg" alt="ноутбук" width="370"
+                height="294">
+                <p class="list-item__top-text">
+                  
+                </p>
+                </div>
+            <h2 class="list-item__title">Inspiration has no Borders</h2>
+            <p class="list-item__text">Веб-сайт</p>
+          </a>
+        </Li>
+        <Li class="list-examples__list-item list-item">
+          <div class="list-item__wrap">
+            <a class="list-item__link link" href="./portfolio.html"><img src="./images/port7.jpg" alt="ноутбук" width="370"
+                height="294">
+                <p class="list-item__top-text">
+                  
+                </p>
+                </div>
+            <h2 class="list-item__title">Издание Limited Edition</h2>
+            <p class="list-item__text">Дизайн</p>
+          </a>
+        </Li>
+        <Li class="list-examples__list-item list-item">
+          <div class="list-item__wrap">
+            <a class="list-item__link link" href="./portfolio.html"><img src="./images/port8.jpg" alt="ноутбук" width="370"
+                height="294">
+                <p class="list-item__top-text">
+                  
+                </p>
+                </div>
+            <h2 class="list-item__title">Проект LAB</h2>
+            <p class="list-item__text">Маркетинг</p>
+          </a>
+        </Li>
+        <Li class="list-examples__list-item list-item">
+          <div class="list-item__wrap">
+            <a class="list-item__link link" href="./portfolio.html"><img src="./images/port9.jpg" alt="ноутбук" width="370"
+                height="294">
+                <p class="list-item__top-text">
+                  
+                </p>
+                </div>
+            <span>
+              <h2 class="list-item__title" lang="en"> Growing Business</h2>
+            </span>
+            <p class="list-item__text">Приложение</p>
+          </a>
+        </Li>
+      </ul>
+    </div>
+  </main>
+
+  <!--------------------ФУТЕР--------------------------->
+
+  <footer class="footer">
+    <div class="container network-wrapper">
+      <div class="footer__network-left">
+        <a class="logo__footer link" href="./index.html"><span class="logo__footer-left">Web</span><span
+            class="logo__footer-right">Studio</span>
+        </a>
+        <ul class="footer__list list">
+          <li class="footer__li">
+            <a class="footer__link link" target="_blank" href="https://goo.gl/maps/3EM8mt6BHz2Kh24a8">
+              г. Киев, пр-т Леси Украинки, 26</a>
+          </li>
+          <li class="footer__li">
+            <a class="footer__mail link" href="mailto:info@example.com">info@example.com</a>
+          </li>
+          <li class="footer__li">
+            <a class="footer__tel link" href="tel:+38 099 111 11 11">+38 099 111 11 11</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="network">
+        <h3 class="footer__heading">присоединяйтесь</h3>
+        <ul class="footer__network list">
+          <li class="footer__item">
+            <a href="https://facebook.com" target="_blank" class="footer__network-link">
+              <svg class="footer__icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="https://facebook.com" target="_blank" class="footer__network-link">
+              <svg class="footer__icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="https://facebook.com" target="_blank" class="footer__network-link">
+              <svg class="footer__icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="https://facebook.com" target="_blank" class="footer__network-link">
+              <svg class="footer__icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__sub">
+        <H3 class="footer__sub-text"> Подпишитесь на рассылку</H3>
+        <div class="footer__btn"> 
+        <input type="text" class="footer__sub-input" placeholder="E-mail">
+        
+        <button type="button" class="footer__sub-btn"> Подписаться <svg class="footer__sub-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-telegram"></use>
+          </svg>
+        </button>
+      </div>
+      </div>
+    </div>
+    
+  </footer>
+</body>
+
+</html>

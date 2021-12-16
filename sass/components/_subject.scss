@@ -1,0 +1,31 @@
+.subject__wrapp {
+    position: relative;
+  }
+  
+  .subject__work-text {
+    @include font (700, 14px, 1.14, 0.03em);
+    text-align: center;
+    position: absolute;
+    bottom: 0%;
+    padding: 27px 82px 27px 83px;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+  }
+  
+  .subject{
+    padding-bottom: 94px;
+    padding-top: 94;
+  }
+  
+  .subject__title {
+    @include font (700, 36px, 1.17, 0.03em);
+    text-align: center;
+    color:$color-top-text;
+    padding-bottom: 50px;
+  }
+  .subject__works {
+    display: flex;
+    justify-content: space-between;
+  }
