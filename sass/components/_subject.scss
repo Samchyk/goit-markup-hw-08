@@ -15,8 +15,12 @@
   }
   
   .subject{
-    padding-bottom: 94px;
-    padding-top: 94;
+    display: none;
+    @media screen and (min-width: 1200px) {
+      display: block;
+      padding-bottom: 94px;
+    padding-top: 94px;
+    }
   }
   
   .subject__title {

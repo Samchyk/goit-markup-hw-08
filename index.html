@@ -12,47 +12,79 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="stylesheet" href="./css/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <!---------------------ГОЛОВА------------------------->
 
 <body>
-  <header class="container header-container">
-    <div class="page-header">
+  <header class="page-header">
+    <div class="container main-nav">
       <nav class="logo">
         <a class="logo__header link" href="./index.html"><span class="logo__header-left">Web</span><span
             class="logo__header-right">Studio</span>
         </a>
-
-        <ul class="nav list">
-          <li>
-            <a class="nav__link active link" href="./index.html">Студия
-            </a>
-          </li>
-          <li>
-            <a class="nav__link link " href="./portfolio.html">Портфолио</a>
-          </li>
-          <li><a class="nav__link link" href="Контакты">Контакты</a></li>
+        <ul class="site-nav list">
+          <li class="site-nav__item"><a href="./index.html" class="site-nav__link link current">Студия</a></li>
+          <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link link">Портфолио</a></li>
+          <li class="site-nav__item"><a href="" class="site-nav__link link">Контакты</a></li>
         </ul>
       </nav>
 
-      <div class="header-kontakt">
-        <ul class="kontakt list">
-          <li>
-            <a class="kontakt__link link" href="mailto:info@devstudio.com">info@devstudio.com
-              <svg class="kontakt__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-envelope-hover"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a class="kontakt__link link" href="tel:+38 099 111 11 11">+38 099 111 11 11
-              <svg class="kontakt__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-rel"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+      <ul class="site-nav__cont-nav list">
+        <li class="cont-nav__item cont-nav__item--mail"><a href="mailto:info@devstudio.com" class="cont-nav__link link">
+            <svg class="cont-nav__icon" width="16" height="12">
+              <use href="./images/icons.svg#icon-envelope-hover">
+              </use>
+            </svg>info@devstudio.com</a></li>
+        <li class="cont-nav__item cont-nav__item--tel"><a href="tel:+380961111111" class="cont-nav__link link">
+            <svg class="cont-nav__icon" width="10" height="16">
+              <use href="./images/icons.svg#icon-rel">
+              </use>
+            </svg>+38 096 111 11 11</a></li>
+      </ul>
+
+      <button type="button" class="open-menu-btn">
+        <svg class="open-menu-btn__icon" width="40" height="40">
+          <use href="./images/icons.svg#icon-menu">
+          </use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mob-menu is-hidden">
+      <div class="container">
+        <div class="mob-menu-top">
+          <button type="button" class="close-menu-btn">
+            <svg class="close-menu-btn__icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-close">
+              </use>
+            </svg>
+          </button>
+          <ul class="mob-menu__list list">
+            <li class="mob-menu__item"><a href="./index.html" class="mob-menu__link link current">Студия</a></li>
+            <li class="mob-menu__item"><a href="./portfolio.html" class="mob-menu__link link">Портфолио</a></li>
+            <li class="mob-menu__item"><a href="" class="mob-menu__link link">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="mob-menu-bottom">
+          <ul class="mob-menu__cont list">
+            <li class="mob-menu__item"><a href="tel:+380961111111" class="mob-menu__tel link">
+                +38 096 111 11 11</a></li>
+            <li class="mob-menu__item"><a href="mailto:info@devstudio.com" class="mob-menu__mail link">
+                info@devstudio.com</a></li </ul>
+            <ul class="mob-menu-soc list">
+              <li class="mob-menu-soc__item"><a href="" class="mob-menu-soc__link link">
+                  Instagram</a></li>
+              <li class="mob-menu-soc__item"><a href="" class="mob-menu-soc__link link">
+                  Twitter</a></li>
+              <li class="mob-menu-soc__item"><a href="" class="mob-menu-soc__link link">
+                  Facebook</a></li>
+              <li class="mob-menu-soc__item"><a href="" class="mob-menu-soc__link link">
+                  LinkedIn</a></li>
+            </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -60,15 +92,16 @@
   <!------------------ХИРО с кнопокой---------------------->
 
   <main>
-    <div>
-      <section class="hero">
+    <section class="hero">
+      <div class="container">
+
         <h1 class="hero__title">
           Эффективные решения <br />
           для вашего бизнеса
         </h1>
         <button class="hero__btn" type="button" data-modal-open>Заказать услугу</button>
-      </section>
-    </div>
+      </div>
+    </section>
 
     <!------------------НАШИ ПРЕИМУЩЕСТВА------------>
 
@@ -76,49 +109,49 @@
       <div class="container">
         <h2 class="benefits__title">Наши преимущества</h2>
         <ul class="list benefits__list">
-          <li class="benefits__text">
+          <li class="benefits__item">
             <div class="benefits__text-icon">
               <svg class="benefits-icon" width="70" height="70">
                 <use href="./images/icons.svg#icon-antenna1"></use>
               </svg>
             </div>
-            <h3 class="list-subtitle">Внимание к деталям</h3>
-            <p class="list-text">
+            <h3 class="benefits__title">Внимание к деталям</h3>
+            <p class="benefits__text">
               Идейные соображения, а также начало повседневной работы по
               формированию позиции.
             </p>
           </li>
-          <li class="benefits__text">
+          <li class="benefits__item">
             <div class="benefits__text-icon">
               <svg class="benefits__icon" width="70" height="70">
                 <use href="./images/icons.svg#icon-clock"></use>
               </svg>
             </div>
-            <h3 class="benefits__subtitle">Пунктуальность</h3>
+            <h3 class="benefits__title">Пунктуальность</h3>
             <p class="benefits__text">
               Задача организации, в особенности же рамки и место обучения
               кадров влечет за собой.
             </p>
           </li>
-          <li class="benefits__text">
+          <li class="benefits__item">
             <div class="benefits__text-icon">
               <svg class="benefits-icon" width="70" height="70">
                 <use href="./images/icons.svg#icon-diagram1"></use>
               </svg>
             </div>
-            <h3 class="benefits__subtitle">Планирование</h3>
+            <h3 class="benefits__title">Планирование</h3>
             <p class="benefits__text">
               Равным образом консультация с широким активом в значительной
               степени обуславливает.
             </p>
           </li>
-          <li class="benefits__text">
+          <li class="benefits__item">
             <div class="benefits__text-icon">
               <svg class="benefits__icon" width="70" height="70">
                 <use href="./images/icons.svg#icon-astronaut1"></use>
               </svg>
             </div>
-            <h3 class="benefits__subtitle">Современные технологии</h3>
+            <h3 class="benefits__title">Современные технологии</h3>
             <p class="benefits__text">
               Значимость этих проблем настолько очевидна, что реализация
               плановых заданий.
@@ -163,7 +196,21 @@
         <h2 class="command__title">Наша команда</h2>
         <ul class="list command-list">
           <li class="command-list__item">
-            <img src="./images/1.jpg" alt="Igor Demiyanenko" width="270" height="260" />
+            <picture>
+              <source srcset="
+            ./images/comand/desk/comand.jpg 1x,
+            ./images/comand/desk/comand-2x.jpg2x
+            " media="(min-width: 1200px)">
+              <source srcset="
+            ./images/comand/tabl//comand-tabl.jpg 1x,
+            ./images/comand//tabl/comand-tabl-2x.jpg2x
+            " media="(min-width: 768px)">
+              <source srcset="
+            ./images/comand/mob/comand-mob.jpg 1x,
+            ./images/comand/mob/comand-mob-2x.jpg2x
+            " media="(min-width: 320px)">
+              <img src="./images/1.jpg" alt="Igor Demiyanenko" />
+            </picture>
             <h3 class="command-list__name">Игорь Демьяненко</h3>
             <p class="command-list__text">Product Designer</p>
             <ul class="comand-social__list list">
@@ -198,7 +245,21 @@
             </ul>
           </li>
           <li class="command-list__item">
-            <img src="./images/2.jpg" alt="Olga Repina" width="270" height="260" />
+            <picture>
+              <source srcset="
+              ./images/comand/desk/comand1.jpg 1x,
+              ./images/comand/desk/comand1-2x.jpg2x
+              " media="(min-width: 1200px)">
+              <source srcset="
+              ./images/comand/tabl//comand1-tabl.jpg 1x,
+              ./images/comand//tabl/comand1-tabl-2x.jpg2x
+              " media="(min-width: 768px)">
+              <source srcset="
+              ./images/comand/mob/comand1-mob.jpg 1x,
+              ./images/comand/mob/comand1-mob-2x.jpg2x
+              " media="(min-width: 320px)">
+              <img src="./images/2.jpg" alt="Olga Repina" />
+            </picture>
             <h3 class="command-list__name">Ольга Репина</h3>
             <p class="command-list__text">Frontend Developer</p>
             <ul class="comand-social__list list">
@@ -233,7 +294,21 @@
             </ul>
           </li>
           <li class="command-list__item">
-            <img src="./images/3.jpg" alt="Nikolay Tarasov" width="270" height="260" />
+            <picture>
+              <source srcset="
+              ./images/comand/desk/comand2.jpg 1x,
+              ./images/comand/desk/comand2-2x.jpg2x
+              " media="(min-width: 1200px)">
+              <source srcset="
+              ./images/comand/tabl//comand2-tabl.jpg 1x,
+              ./images/comand//tabl/comand2-tabl-2x.jpg2x
+              " media="(min-width: 768px)">
+              <source srcset="
+              ./images/comand/mob/comand2-mob.jpg 1x,
+              ./images/comand/mob/comand2-mob-2x.jpg2x
+              " media="(min-width: 320px)">
+              <img src="./images/3.jpg" alt="Nikolay Tarasov" />
+            </picture>
             <h3 class="command-list__name">Николай Тарасов</h3>
             <p class="command-list__text">"Marketing</p>
             <ul class="comand-social__list list">
@@ -268,7 +343,21 @@
             </ul>
           </li>
           <li class="command-list__item">
-            <img src="./images/4.jpg" alt="Mihayl Yermakov" width="270" height="260" />
+            <picture>
+              <source srcset="
+              ./images/comand/desk/comand3.jpg 1x,
+              ./images/comand/desk/comand3-2x.jpg2x
+              " media="(min-width: 1200px)">
+              <source srcset="
+              ./images/comand/tabl//comand3-tabl.jpg 1x,
+              ./images/comand//tabl/comand3-tabl-2x.jpg2x
+              " media="(min-width: 768px)">
+              <source srcset="
+              ./images/comand/mob/comand3-mob.jpg 1x,
+              ./images/comand/mob/comand3-mob-2x.jpg2x
+              " media="(min-width: 320px)">
+              <img src="./images/4.jpg" alt="Mihayl Ermakov" />
+            </picture>
             <h3 class="command-list__name">Михаил Ермаков</h3>
             <p class="command-list__text">UI Designer</p>
             <ul class="comand-social__list list">
@@ -417,17 +506,18 @@
       </div>
       <div class="footer__sub">
         <H3 class="footer__sub-text"> Подпишитесь на рассылку</H3>
-        <div class="footer__btn"> 
-        <input type="text" class="footer__sub-input" placeholder="E-mail">
-        
-        <button type="button" class="footer__sub-btn"> Подписаться <svg class="footer__sub-icon" width="24" height="24">
-            <use href="./images/icons.svg#icon-telegram"></use>
-          </svg>
-        </button>
-      </div>
+        <div class="footer__btn">
+          <input type="text" class="footer__sub-input" placeholder="E-mail">
+
+          <button type="button" class="footer__sub-btn"> Подписаться <svg class="footer__sub-icon" width="24"
+              height="24">
+              <use href="./images/icons.svg#icon-telegram"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
-    
+
   </footer>
 
   <!-------------------------Модалка------------------------->
@@ -501,6 +591,7 @@
       </form>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>

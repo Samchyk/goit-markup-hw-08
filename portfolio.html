@@ -11,50 +11,83 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="stylesheet" href="./css/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <!---------------------ГОЛОВА------------------------->
 
 <body>
-  <header class="container header-container">
-    <div class="page-header">
+  <header class="page-header">
+    <div class="container main-nav">
       <nav class="logo">
         <a class="logo__header link" href="./index.html"><span class="logo__header-left">Web</span><span
             class="logo__header-right">Studio</span>
         </a>
-
-        <ul class="nav list">
-          <li>
-            <a class="nav__link  link" href="./index.html">Студия
-            </a>
-          </li>
-          <li>
-            <a class="nav__link active link " href="./portfolio.html">Портфолио</a>
-          </li>
-          <li><a class="nav__link link" href="Контакты">Контакты</a></li>
+        <ul class="site-nav list">
+          <li class="site-nav__item"><a href="./index.html" class="site-nav__link link ">Студия</a></li>
+          <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link link current">Портфолио</a></li>
+          <li class="site-nav__item"><a href="" class="site-nav__link link">Контакты</a></li>
         </ul>
       </nav>
 
-      <div class="header-kontakt">
-        <ul class="kontakt list">
-          <li>
-            <a class="kontakt__link link" href="mailto:info@devstudio.com">info@devstudio.com
-              <svg class="kontakt__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-envelope-hover"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a class="kontakt__link link" href="tel:+38 099 111 11 11">+38 099 111 11 11
-              <svg class="kontakt__icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-rel"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+      <ul class="site-nav__cont-nav list">
+        <li class="cont-nav__item cont-nav__item--mail"><a href="mailto:info@devstudio.com" class="cont-nav__link link">
+            <svg class="cont-nav__icon" width="16" height="12">
+              <use href="./images/icons.svg#icon-envelope-hover">
+              </use>
+            </svg>info@devstudio.com</a></li>
+        <li class="cont-nav__item cont-nav__item--tel"><a href="tel:+380961111111" class="cont-nav__link link">
+            <svg class="cont-nav__icon" width="10" height="16">
+              <use href="./images/icons.svg#icon-rel">
+              </use>
+            </svg>+38 096 111 11 11</a></li>
+      </ul>
+
+      <button type="button" class="open-menu-btn">
+        <svg class="open-menu-btn__icon" width="40" height="40">
+          <use href="./images/icons.svg#icon-menu">
+          </use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mob-menu is-hidden">
+      <div class="container">
+        <div class="mob-menu-top">
+          <button type="button" class="close-menu-btn">
+            <svg class="close-menu-btn__icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-close">
+              </use>
+            </svg>
+          </button>
+          <ul class="mob-menu__list list">
+            <li class="mob-menu__item"><a href="./index.html" class="mob-menu__link link current">Студия</a></li>
+            <li class="mob-menu__item"><a href="./portfolio.html" class="mob-menu__link link">Портфолио</a></li>
+            <li class="mob-menu__item"><a href="" class="mob-menu__link link">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="mob-menu-bottom">
+          <ul class="mob-menu__cont list">
+            <li class="mob-menu__item"><a href="tel:+380961111111" class="mob-menu__tel link">
+                +38 096 111 11 11</a></li>
+            <li class="mob-menu__item"><a href="mailto:info@devstudio.com" class="mob-menu__mail link">
+                info@devstudio.com</a></li </ul>
+            <ul class="mob-menu-soc list">
+              <li class="mob-menu-soc__item"><a href="" class="mob-menu-soc__link link">
+                  Instagram</a></li>
+              <li class="mob-menu-soc__item"><a href="" class="mob-menu-soc__link link">
+                  Twitter</a></li>
+              <li class="mob-menu-soc__item"><a href="" class="mob-menu-soc__link link">
+                  Facebook</a></li>
+              <li class="mob-menu-soc__item"><a href="" class="mob-menu-soc__link link">
+                  LinkedIn</a></li>
+            </ul>
+        </div>
       </div>
     </div>
   </header>
+
   <!---------------------------КНОПКИ--------------------->
 
 
@@ -78,113 +111,240 @@
       <ul class="list list-examples">
         <Li class="list-examples__list-item list-item">
           <div class="list-item__wrap">
-          <a class="list-item__link link" href="./portfolio.html"><img src="./images/port1.jpg" alt="ноутбук" width="370"
-              height="294">
+            <a class="list-item__link link" href="./portfolio.html">
+              <picture>
+                <source srcset="
+              ./images/portfolio/desk/img0.jpg 1x,
+              ./images/portfolio/desk/img0-2x.jpg2x
+              " media="(min-width: 1200px)">
+                <source srcset="
+              ./images/portfolio/tabl/img0.jpg 1x,
+              ./images/portfolio/tabl/img0-2x.jpg2x
+              " media="(min-width: 768px)">
+                <source srcset="
+              ./images/portfolio/mob/img0.jpg 1x,
+              ./images/portfolio/mob/img0-2x.jpg2x
+              " media="(min-width: 320px)">
+                <img src="./images/port1.jpg" alt="ноутбук">
+              </picture>
               <p class="list-item__top-text">
-                Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
+                Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для
+                цифрового
                 шпионажа и атак на защищённые сервера конкурентов.
               </p>
-              </div>
-            <h2 class="list-item__title">Технокряк</h2>
-            <p class="list-item__text">Веб-сайт</p>
+          </div>
+          <h2 class="list-item__title">Технокряк</h2>
+          <p class="list-item__text">Веб-сайт</p>
           </a>
         </Li>
         <Li class="list-examples__list-item list-item">
           <div class="list-item__wrap">
-            <a class="list-item__link link" href="./portfolio.html"><img src="./images/port2.jpg" alt="ноутбук" width="370"
-                height="294">
-                <p class="list-item__top-text">
-                  
-                </p>
-                </div>
-            <h2 class="list-item__title">Постер New Orlean vs Golden Star</h2>
-            <p class="list-item__text">Дизайн</p>
+            <a class="list-item__link link" href="./portfolio.html">
+              <picture>
+                <source srcset="
+              ./images/portfolio/desk/img.jpg 1x,
+              ./images/portfolio/desk/img-2x.jpg2x
+              " media="(min-width: 1200px)">
+                <source srcset="
+              ./images/portfolio/tabl/img.jpg 1x,
+              ./images/portfolio/tabl/img-2x.jpg2x
+              " media="(min-width: 768px)">
+                <source srcset="
+              ./images/portfolio/mob/img.jpg 1x,
+              ./images/portfolio/mob/img-2x.jpg2x
+              " media="(min-width: 320px)">
+                <img src="./images/port2.jpg" alt="баскедболист">
+              </picture>
+              <p class="list-item__top-text">
+
+              </p>
+          </div>
+          <h2 class="list-item__title">Постер New Orlean vs Golden Star</h2>
+          <p class="list-item__text">Дизайн</p>
           </a>
         </Li>
         <Li class="list-examples__list-item list-item">
           <div class="list-item__wrap">
-            <a class="list-item__link link" href="./portfolio.html"><img src="./images/port3.jpg" alt="ноутбук" width="370"
-                height="294">
-                <p class="list-item__top-text">
-                  
-                </p>
-                </div>
-            <h2 class="list-item__title">Ресторан Seafood</h2>
-            <p class="list-item__text">Приложение</p>
+            <a class="list-item__link link" href="./portfolio.html">
+              <picture>
+                <source srcset="
+              ./images/portfolio/desk/img1.jpg 1x,
+              ./images/portfolio/desk/img1-2x.jpg2x
+              " media="(min-width: 1200px)">
+                <source srcset="
+              ./images/portfolio/tabl/img1.jpg 1x,
+              ./images/portfolio/tabl/img1-2x.jpg2x
+              " media="(min-width: 768px)">
+                <source srcset="
+              ./images/portfolio/mob/img1.jpg 1x,
+              ./images/portfolio/mob/img1-2x.jpg2x
+              " media="(min-width: 320px)">
+                <img src="./images/port3.jpg" alt="">
+              </picture>
+              <p class="list-item__top-text">
+
+              </p>
+          </div>
+          <h2 class="list-item__title">Ресторан Seafood</h2>
+          <p class="list-item__text">Приложение</p>
           </a>
         </Li>
         <Li class="list-examples__list-item list-item">
           <div class="list-item__wrap">
-            <a class="list-item__link link" href="./portfolio.html"><img src="./images/port4.jpg" alt="ноутбук" width="370"
-                height="294">
-                <p class="list-item__top-text">
-                  
-                </p>
-                </div>
-            <h2 class="list-item__title">Проект Prime</h2>
-            <p class="list-item__text">Маркетинг</p>
+            <a class="list-item__link link" href="./portfolio.html">
+              <picture>
+                <source srcset="
+              ./images/portfolio/desk/img2.jpg 1x,
+              ./images/portfolio/desk/img2-2x.jpg2x
+              " media="(min-width: 1200px)">
+                <source srcset="
+              ./images/portfolio/tabl/img2.jpg 1x,
+              ./images/portfolio/tabl/img2-2x.jpg2x
+              " media="(min-width: 768px)">
+                <source srcset="
+              ./images/portfolio/mob/img2.jpg 1x,
+              ./images/portfolio/mob/img2-2x.jpg2x
+              " media="(min-width: 320px)">
+                <img src="./images/port4.jpg" alt="наушнки">
+              </picture>
+              <p class="list-item__top-text">
+
+              </p>
+          </div>
+          <h2 class="list-item__title">Проект Prime</h2>
+          <p class="list-item__text">Маркетинг</p>
           </a>
         </Li>
         <Li class="list-examples__list-item list-item">
           <div class="list-item__wrap">
-            <a class="list-item__link link" href="./portfolio.html"><img src="./images/port5.jpg" alt="ноутбук" width="370"
-                height="294">
-                <p class="list-item__top-text">
-                  
-                </p>
-                </div>
-            <h2 class="list-item__title">Проект Boxes</h2>
-            <p class="list-item__text">Приложение</p>
+            <a class="list-item__link link" href="./portfolio.html">
+              <picture>
+                <source srcset="
+              ./images/portfolio/desk/img3.jpg 1x,
+              ./images/portfolio/desk/img3-2x.jpg2x
+              " media="(min-width: 1200px)">
+                <source srcset="
+              ./images/portfolio/tabl/img3.jpg 1x,
+              ./images/portfolio/tabl/img3-2x.jpg2x
+              " media="(min-width: 768px)">
+                <source srcset="
+              ./images/portfolio/mob/img3.jpg 1x,
+              ./images/portfolio/mob/img3-2x.jpg2x
+              " media="(min-width: 320px)">
+                <img src="./images/port5.jpg" alt="Коробки">
+              </picture>
+              <p class="list-item__top-text">
+
+              </p>
+          </div>
+          <h2 class="list-item__title">Проект Boxes</h2>
+          <p class="list-item__text">Приложение</p>
           </a>
         </Li>
         <Li class="list-examples__list-item list-item">
           <div class="list-item__wrap">
-            <a class="list-item__link link" href="./portfolio.html"><img src="./images/port6.jpg" alt="ноутбук" width="370"
-                height="294">
-                <p class="list-item__top-text">
-                  
-                </p>
-                </div>
-            <h2 class="list-item__title">Inspiration has no Borders</h2>
-            <p class="list-item__text">Веб-сайт</p>
+            <a class="list-item__link link" href="./portfolio.html">
+              <picture>
+                <source srcset="
+              ./images/portfolio/desk/img4.jpg 1x,
+              ./images/portfolio/desk/img4-2x.jpg2x
+              " media="(min-width: 1200px)">
+                <source srcset="
+              ./images/portfolio/tabl/img4.jpg 1x,
+              ./images/portfolio/tabl/img4-2x.jpg2x
+              " media="(min-width: 768px)">
+                <source srcset="
+              ./images/portfolio/mob/img4.jpg 1x,
+              ./images/portfolio/mob/img4-2x.jpg2x
+              " media="(min-width: 320px)">
+                <img src="./images/port6.jpg" alt="монитор">
+              </picture>
+              <p class="list-item__top-text">
+
+              </p>
+          </div>
+          <h2 class="list-item__title">Inspiration has no Borders</h2>
+          <p class="list-item__text">Веб-сайт</p>
           </a>
         </Li>
         <Li class="list-examples__list-item list-item">
           <div class="list-item__wrap">
-            <a class="list-item__link link" href="./portfolio.html"><img src="./images/port7.jpg" alt="ноутбук" width="370"
-                height="294">
-                <p class="list-item__top-text">
-                  
-                </p>
-                </div>
-            <h2 class="list-item__title">Издание Limited Edition</h2>
-            <p class="list-item__text">Дизайн</p>
+            <a class="list-item__link link" href="./portfolio.html">
+              <picture>
+                <source srcset="
+              ./images/portfolio/desk/img5.jpg 1x,
+              ./images/portfolio/desk/img5-2x.jpg2x
+              " media="(min-width: 1200px)">
+                <source srcset="
+              ./images/portfolio/tabl/img5.jpg 1x,
+              ./images/portfolio/tabl/img5-2x.jpg2x
+              " media="(min-width: 768px)">
+                <source srcset="
+              ./images/portfolio/mob/img5.jpg 1x,
+              ./images/portfolio/mob/img5-2x.jpg2x
+              " media="(min-width: 320px)">
+                <img src="./images/port7.jpg" alt="книга">
+              </picture>
+              <p class="list-item__top-text">
+
+              </p>
+          </div>
+          <h2 class="list-item__title">Издание Limited Edition</h2>
+          <p class="list-item__text">Дизайн</p>
           </a>
         </Li>
         <Li class="list-examples__list-item list-item">
           <div class="list-item__wrap">
-            <a class="list-item__link link" href="./portfolio.html"><img src="./images/port8.jpg" alt="ноутбук" width="370"
-                height="294">
-                <p class="list-item__top-text">
-                  
-                </p>
-                </div>
-            <h2 class="list-item__title">Проект LAB</h2>
-            <p class="list-item__text">Маркетинг</p>
+            <a class="list-item__link link" href="./portfolio.html">
+              <picture>
+                <source srcset="
+              ./images/portfolio/desk/img6.jpg 1x,
+              ./images/portfolio/desk/img6-2x.jpg2x
+              " media="(min-width: 1200px)">
+                <source srcset="
+              ./images/portfolio/tabl/img6.jpg 1x,
+              ./images/portfolio/tabl/img6-2x.jpg2x
+              " media="(min-width: 768px)">
+                <source srcset="
+              ./images/portfolio/mob/img6.jpg 1x,
+              ./images/portfolio/mob/img6-2x.jpg2x
+              " media="(min-width: 320px)">
+                <img src="./images/port8.jpg" alt="бирка">
+              </picture>
+              <p class="list-item__top-text">
+
+              </p>
+          </div>
+          <h2 class="list-item__title">Проект LAB</h2>
+          <p class="list-item__text">Маркетинг</p>
           </a>
         </Li>
         <Li class="list-examples__list-item list-item">
           <div class="list-item__wrap">
-            <a class="list-item__link link" href="./portfolio.html"><img src="./images/port9.jpg" alt="ноутбук" width="370"
-                height="294">
-                <p class="list-item__top-text">
-                  
-                </p>
-                </div>
-            <span>
-              <h2 class="list-item__title" lang="en"> Growing Business</h2>
-            </span>
-            <p class="list-item__text">Приложение</p>
+            <a class="list-item__link link" href="./portfolio.html">
+              <picture>
+                <source srcset="
+              ./images/portfolio/desk/img7.jpg 1x,
+              ./images/portfolio/desk/img7-2x.jpg2x
+              " media="(min-width: 1200px)">
+                <source srcset="
+              ./images/portfolio/tabl/img7.jpg 1x,
+              ./images/portfolio/tabl/img7-2x.jpg2x
+              " media="(min-width: 768px)">
+                <source srcset="
+              ./images/portfolio/mob/img7.jpg 1x,
+              ./images/portfolio/mob/img7-2x.jpg2x
+              " media="(min-width: 320px)">
+                <img src="./images/port9.jpg" alt="ноутбук">
+              </picture>
+              <p class="list-item__top-text">
+
+              </p>
+          </div>
+          <span>
+            <h2 class="list-item__title" lang="en"> Growing Business</h2>
+          </span>
+          <p class="list-item__text">Приложение</p>
           </a>
         </Li>
       </ul>
@@ -248,18 +408,20 @@
       </div>
       <div class="footer__sub">
         <H3 class="footer__sub-text"> Подпишитесь на рассылку</H3>
-        <div class="footer__btn"> 
-        <input type="text" class="footer__sub-input" placeholder="E-mail">
-        
-        <button type="button" class="footer__sub-btn"> Подписаться <svg class="footer__sub-icon" width="24" height="24">
-            <use href="./images/icons.svg#icon-telegram"></use>
-          </svg>
-        </button>
-      </div>
+        <div class="footer__btn">
+          <input type="text" class="footer__sub-input" placeholder="E-mail">
+
+          <button type="button" class="footer__sub-btn"> Подписаться <svg class="footer__sub-icon" width="24"
+              height="24">
+              <use href="./images/icons.svg#icon-telegram"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
-    
+
   </footer>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>
